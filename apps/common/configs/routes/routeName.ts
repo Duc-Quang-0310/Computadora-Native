@@ -13,15 +13,16 @@ export const route = {
     CART: "/cart",
     CART_ADD_SUCCESS: "/cart/add-success",
     BLOG: "/blog",
-    BLOG_DETAILS: "/blog-details",
+    BLOG_DETAILS: "/blog/details/:id",
     BUY_HISTORY: "/buy-history",
     RECEIPT: "/receipt",
-    RECEIPT_SUCCESS:"/receipt-success"
+    RECEIPT_SUCCESS:"/receipt-success",
+    LAPTOP: "/laptop",
+    LAPTOP_DETAILS: "/laptop/details/:id"
 }
 
 export interface iRoute {
     path: string,
-    name: string,
     exact: boolean,
     component: any,
     props?: any,
