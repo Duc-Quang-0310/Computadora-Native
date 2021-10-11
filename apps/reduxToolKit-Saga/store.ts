@@ -12,6 +12,8 @@ import {
 import AuthSlice from './Auth/AuthSlice'
 import rootsaga from './rootsaga'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import BlogSlice from './Blogs/BlogSlice'
+import LaptopSlice from './Laptop/LaptopSlice'
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -22,7 +24,9 @@ const persistConfig = {
 
 export const store = configureStore({
     reducer: persistReducer(persistConfig, combineReducers({
-        auth: AuthSlice
+        auth: AuthSlice,
+        blog: BlogSlice,
+        laptop: LaptopSlice
     })),
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({ 
         serializableCheck: {
