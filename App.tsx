@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, SafeAreaView } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/lib/integration/react";
 import Application from "./apps/Application";
@@ -9,9 +9,9 @@ export default function App() {
   return (
     <PersistGate loading={null} persistor={persistor}>
       <Provider store={store}>
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
           <Application />
-        </SafeAreaView>
+        </View>
       </Provider>
     </PersistGate>
   );
@@ -20,6 +20,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#dcdcdc",
   },
 });

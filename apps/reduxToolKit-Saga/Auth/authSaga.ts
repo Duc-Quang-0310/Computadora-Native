@@ -35,7 +35,8 @@ function* loginSaga ( action: PayloadAction<iLoginParams>) {
             } ))
 
             setTimeout(() => {
-                window.location.pathname = route.HOME
+                const history = useHistory();
+                history.push(route.HOME)
             }, 600);
             yield put(reset())
         }        
