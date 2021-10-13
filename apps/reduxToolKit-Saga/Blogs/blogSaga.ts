@@ -10,7 +10,7 @@ interface iResponType {
 function* fetchBlogSaga () {
     try {
         const response:iResponType = yield call(() => blogService.getAll())
-        console.log("response", response);
+        
         if( response.success  ) {
             yield put(fetchingSuccess({
                 datas: response.data,

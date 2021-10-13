@@ -10,19 +10,25 @@ import { fetchingLaptop } from "../../reduxToolKit-Saga/Laptop/LaptopSlice";
 
 export default function Loading() {
   const history = useHistory();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     try {
-      dispatch(fetchingBlog());
-      dispatch(fetchingLaptop());
+      // dispatch(fetchingBlog());
+      // dispatch(fetchingLaptop());
     } catch (error) {
       console.log(error);
     } finally {
-      setIsLoading(true);
+      setIsLoading(false);
     }
   }, [isLoading]);
+
+  if (!isLoading) {
+    setTimeout(() => {
+      history.push(route.HOME);
+    }, 1000);
+  }
 
   return (
     <View style={styles.container}>
