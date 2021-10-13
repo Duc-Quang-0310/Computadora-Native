@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
+  TouchableWithoutFeedback,
 } from "react-native";
 import { Formik } from "formik";
 import { MaterialCommunityIcons, AntDesign, Entypo } from "@expo/vector-icons";
@@ -33,9 +34,12 @@ export default function SignIn() {
 
   return (
     <View style={styles.container}>
-      <View style={[styles.centerView, styles.marginBottom]}>
-        <Image source={require("../../../assets/imgs/logo-primary.png")} />
-      </View>
+      <TouchableWithoutFeedback onPress={() => history.push(route.HOME)}>
+        <Image
+          style={{ alignSelf: "center", marginBottom: 30 }}
+          source={require("../../../assets/imgs/logo-primary.png")}
+        />
+      </TouchableWithoutFeedback>
 
       <Formik
         initialValues={validateSignInObject}
@@ -165,7 +169,6 @@ const styles = StyleSheet.create({
   },
   centerView: {
     display: "flex",
-    alignItems: "center",
   },
   input: {
     height: 66,
@@ -196,9 +199,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 10,
     marginTop: 30,
-  },
-  marginBottom: {
-    marginBottom: 30,
   },
   welcomePicture: {
     position: "absolute",
