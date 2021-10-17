@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
   },
   iconView: {
     position: "relative",
-    marginVertical: 10,
+    marginVertical: 8,
   },
   icon: {
     position: "absolute",

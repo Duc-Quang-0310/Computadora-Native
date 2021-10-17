@@ -8,6 +8,7 @@ import {
   Image,
   TouchableOpacity,
   TouchableWithoutFeedback,
+  ScrollView,
 } from "react-native";
 import { MaterialCommunityIcons, AntDesign, Entypo } from "@expo/vector-icons";
 import { colorSchema } from "../../../common/constants/colorSchema";
@@ -37,7 +38,7 @@ export default function SignUp() {
       <TouchableWithoutFeedback onPress={() => history.push(route.HOME)}>
         <Image
           source={require("../../../assets/imgs/logo-primary.png")}
-          style={{ alignSelf: "center", marginBottom: 30 }}
+          style={{ alignSelf: "center", marginBottom: 15 }}
         />
       </TouchableWithoutFeedback>
 
@@ -87,7 +88,7 @@ export default function SignUp() {
                   styles.input,
                   touched.email && errors.email ? styles.borderDanger : null,
                 ]}
-                placeholder="yourEmail@gmail.com"
+                placeholder="example@gmail.com"
                 onChangeText={handleChange("email")}
                 onBlur={handleBlur("email")}
                 value={values.email}
@@ -211,18 +212,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: 35,
     position: "relative",
   },
-
+  centerView: {
+    display: "flex",
+  },
   input: {
-    height: 66,
+    height: 60,
     borderWidth: 1,
     paddingLeft: 80,
     borderRadius: 10,
     borderColor: colorSchema.ICON_COLOR,
-    fontSize: 18,
+    fontSize: 16,
   },
   iconView: {
     position: "relative",
-    marginVertical: 10,
+    marginVertical: 8,
   },
   icon: {
     position: "absolute",
@@ -242,7 +245,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 30,
   },
-
   welcomePicture: {
     position: "absolute",
     width: 221,

@@ -6,5 +6,6 @@ export const colorSchema = {
     BLACK: "#0A0C13",
     LIGHT_GREY: "#f2f2f2",
     ICON_COLOR: '#C0C0C0',
-    TEXT_DANGER: "red"
+    TEXT_DANGER: "red",
+    BACKGROUND: "#F7F5F9"
 }

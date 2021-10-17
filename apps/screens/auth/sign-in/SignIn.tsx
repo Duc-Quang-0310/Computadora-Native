@@ -150,11 +150,6 @@ export default function SignIn() {
           </View>
         )}
       </Formik>
-
-      <Image
-        style={styles.welcomePicture}
-        source={require("../../../assets/imgs/welcome.png")}
-      />
     </View>
   );
 }
@@ -171,7 +166,7 @@ const styles = StyleSheet.create({
     display: "flex",
   },
   input: {
-    height: 66,
+    height: 60,
     borderWidth: 1,
     paddingLeft: 80,
     borderRadius: 10,
@@ -180,7 +175,7 @@ const styles = StyleSheet.create({
   },
   iconView: {
     position: "relative",
-    marginVertical: 18,
+    marginVertical: 10,
   },
   icon: {
     position: "absolute",
