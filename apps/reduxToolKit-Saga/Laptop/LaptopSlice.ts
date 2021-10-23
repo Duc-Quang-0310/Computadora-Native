@@ -28,6 +28,7 @@ export const LaptopSlice = createSlice({
             state.progress = true
         },
         fetchingSuccess: (state, action: PayloadAction<iFetchLaptopSuccess>) => {
+            console.log("action.payload.datas laptop", action.payload.datas);
             state.datas = action.payload.datas
             state.success = action.payload.success
             state.fetchStatus = true

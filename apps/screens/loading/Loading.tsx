@@ -1,22 +1,22 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, Image, ActivityIndicator } from "react-native";
 import { useHistory } from "react-router";
 import { route } from "../../common/configs/routes/routeName";
 import { colorSchema } from "../../common/constants/colorSchema";
-import { fetchingBlog } from "../../reduxToolKit-Saga/Blogs/BlogSlice";
+import { iResponType } from "../../reduxToolKit-Saga/Auth/authSaga";
 import { useAppDispatch } from "../../reduxToolKit-Saga/hooks";
 import { fetchingLaptop } from "../../reduxToolKit-Saga/Laptop/LaptopSlice";
+import { iBlogData, iBlogResponseType } from "../../services/apiTypes";
+import { blogService } from "../../services/ortherService";
+import Home from "../home/Home";
 
 export default function Loading() {
   const history = useHistory();
   const [isLoading, setIsLoading] = useState(true);
   const dispatch = useAppDispatch();
-
   useEffect(() => {
     try {
-      // dispatch(fetchingBlog());
-      // dispatch(fetchingLaptop());
+      dispatch(fetchingLaptop());
     } catch (error) {
       console.log(error);
     } finally {
