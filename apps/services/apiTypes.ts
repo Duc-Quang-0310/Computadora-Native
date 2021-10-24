@@ -51,12 +51,16 @@ interface iLaptopData {
     chip?: string
     color?: string
     connection?: string
-    imgs?: string[]
+    imgs: string[]
     name?: string
     pin?: string
     price?: string[]
     ram?: string
     review?: string[]
+    screen: string
+    storage: string
+    weight: string
+    window: string
 }
 
 interface iBlogResponseType {

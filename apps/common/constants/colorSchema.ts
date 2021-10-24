@@ -7,5 +7,6 @@ export const colorSchema = {
     LIGHT_GREY: "#f2f2f2",
     ICON_COLOR: '#C0C0C0',
     TEXT_DANGER: "red",
-    BACKGROUND: "#F7F5F9"
+    BACKGROUND: "#F7F5F9",
+    BORDER_LIGHT: "#dcdcdc"
 }
