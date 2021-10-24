@@ -48,7 +48,6 @@ function* loginSaga ( action: PayloadAction<iLoginParams>) {
 }
 
 function* logoutSaga ( ){
-    console.log("logout saga");
     
     try {
         AppStorage.removeStorage("token")

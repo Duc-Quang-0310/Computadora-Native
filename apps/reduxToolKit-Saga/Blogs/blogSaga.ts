@@ -26,6 +26,5 @@ function* fetchBlogSaga () {
 }
 
 export default function* BlogSaga () {
-    console.log("Blog Saga");
     yield all([takeEvery(fetchingBlog.toString(), fetchBlogSaga)])
 }

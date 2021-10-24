@@ -9,7 +9,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-import { useLocation } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import { colorSchema } from "../../common/constants/colorSchema";
 import Navigator from "../../components/navigator/Navigator";
 import { FontAwesome } from "@expo/vector-icons";
@@ -17,6 +17,7 @@ import { Entypo } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Foundation } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { route } from "../../common/configs/routes/routeName";
 
 const iconSize = 30;
 
@@ -34,7 +35,7 @@ const userImgDistanceLeft = userContainerWidth / 2 - userImgWidth / 2;
 const userInfoContentHeight = userContainerHeight - userImgHeight / 2;
 export default function Profile() {
   const location = useLocation().pathname;
-
+  const history = useHistory();
   return (
     <SafeAreaView style={[{ flex: 1 }, styles.contentWrapper]}>
       <ScrollView
@@ -125,7 +126,10 @@ export default function Profile() {
 
                 {/* user action.... */}
 
-                <TouchableOpacity style={styles.userBaseInfo}>
+                <TouchableOpacity
+                  onPress={() => history.push(route.ADDRESS)}
+                  style={styles.userBaseInfo}
+                >
                   <View style={styles.userInfoKey}>
                     <View style={styles.userInfoKeyIcon}>
                       <Foundation
@@ -163,7 +167,10 @@ export default function Profile() {
                     />
                   </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.userBaseInfo}>
+                <TouchableOpacity
+                  onPress={() => history.push(route.PW_CHANGE)}
+                  style={styles.userBaseInfo}
+                >
                   <View style={styles.userInfoKey}>
                     <View style={styles.userInfoKeyIcon}>
                       <Foundation
@@ -298,7 +305,10 @@ const styles = StyleSheet.create({
     maxWidth: 250,
     alignSelf: "flex-start",
   },
-  userInfoKeyIcon: {},
+  userInfoKeyIcon: {
+    width: 30,
+    overflow: "hidden",
+  },
   userInfoKeyText: {
     left: 10,
     fontSize: 22,

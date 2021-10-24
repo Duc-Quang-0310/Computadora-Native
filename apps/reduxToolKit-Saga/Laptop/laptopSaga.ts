@@ -26,6 +26,5 @@ function* fetchLaptopSaga () {
 }
 
 export default function* LaptopSaga () {
-    console.log("Laptop Saga");
     yield all([takeLatest(fetchingLaptop.toString(), fetchLaptopSaga)])
 }

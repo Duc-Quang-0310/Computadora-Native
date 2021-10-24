@@ -5,6 +5,5 @@ import LaptopSaga from "./Laptop/laptopSaga";
 
 
 export default function* rootsaga () {
-    console.log("root Saga");
     yield all([AuthSaga(), LaptopSaga(), BlogSaga()])
 }
