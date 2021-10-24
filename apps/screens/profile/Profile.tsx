@@ -113,7 +113,7 @@ export default function Profile() {
                   </View>
                   <View style={styles.userInfoValue}>
                     <Text style={styles.userInfoTextValue} numberOfLines={1}>
-                      hunghuu0968374@gmail.com
+                      **********
                     </Text>
                   </View>
                 </View>

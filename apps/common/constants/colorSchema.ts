@@ -8,5 +8,7 @@ export const colorSchema = {
     ICON_COLOR: '#C0C0C0',
     TEXT_DANGER: "red",
     BACKGROUND: "#F7F5F9",
-    BORDER_LIGHT: "#dcdcdc"
+    BORDER_LIGHT: "#dcdcdc",
+    PAY_HEADER: "#513529",
+    PAY_TEXT: "#817F7F"
 }

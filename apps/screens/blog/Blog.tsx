@@ -157,10 +157,10 @@ const styles = StyleSheet.create({
   },
   carouselView: {
     borderRadius: 5,
-    height: 200,
+    height: 250,
   },
   carouselImage: {
-    height: 200,
+    height: 250,
     width: "100%",
     backgroundColor: colorSchema.DARK_PRIMARY,
   },
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   blog_text: {
-    paddingVertical: 10,
+    paddingVertical: 25,
     borderColor: colorSchema.BORDER_LIGHT,
     borderRadius: 2,
     borderBottomColor: colorSchema.BORDER_LIGHT,

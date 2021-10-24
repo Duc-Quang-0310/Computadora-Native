@@ -192,10 +192,10 @@ export default function Home() {
                       style={{
                         textAlign: "center",
                         fontSize: 16,
-                        marginLeft: 10,
+                        marginLeft: "auto",
                       }}
                     >
-                      Đánh giá {"\n"} sản phẩm
+                      Đánh giá sản phẩm
                     </Text>
                   </View>
                   <View
@@ -206,10 +206,10 @@ export default function Home() {
                       style={{
                         textAlign: "center",
                         fontSize: 16,
-                        marginLeft: 10,
+                        marginLeft: "auto",
                       }}
                     >
-                      Chia sẻ {"\n"} của bạn
+                      Chia sẻ của bạn
                     </Text>
                   </View>
                 </View>
@@ -288,6 +288,11 @@ export default function Home() {
               color={colorSchema.PRIMARY}
               onPress={() => history.push(route.SEARCH)}
             />
+            <Button
+              title="pay-success"
+              color={colorSchema.PRIMARY}
+              onPress={() => history.push(route.RECEIPT_SUCCESS)}
+            />
           </>
         )}
       </ScrollView>
@@ -337,13 +342,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 10,
-    shadowRadius: 2,
-    shadowColor: colorSchema.BLACK,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
     elevation: 5,
   },
   rightFunc: {
@@ -360,17 +358,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     shadowRadius: 2,
     shadowColor: colorSchema.BLACK,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
     elevation: 5,
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    paddingHorizontal: 30,
+    paddingHorizontal: 40,
   },
   productWrapper: {
     display: "flex",

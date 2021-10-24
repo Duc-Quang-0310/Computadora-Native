@@ -40,7 +40,13 @@ export default function SearchBar({ location }: iSearchBarProps) {
           </TouchableNativeFeedback>
         )}
 
-        <View style={{ width: "70%" }}>
+        <View
+          style={{
+            width: "70%",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <TextInput style={styles.input} placeholder="Bạn muốn tìm gì" />
           <AntDesign
             name="search1"

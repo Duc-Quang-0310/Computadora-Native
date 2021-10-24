@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
   },
   carouselView: {
     borderRadius: 5,
-    height: 200,
+    height: 250,
     display: "flex",
     flexDirection: "row",
     backgroundColor: colorSchema.WHITE,
