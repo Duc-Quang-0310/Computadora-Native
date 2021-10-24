@@ -28,7 +28,7 @@ export const BlogSlice = createSlice({
             state.progress = true
         },
         fetchingSuccess: (state, action: PayloadAction<iFetchBlogSuccess>) => {
-            console.log("action.payload.datas blog", action.payload.datas);
+            // console.log("action.payload.datas blog", action.payload.datas);
             state.datas = action.payload.datas
             state.success = action.payload.success
             state.fetchStatus = true
