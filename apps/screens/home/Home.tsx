@@ -69,15 +69,19 @@ export default function Home() {
 
   const renderCarousel = ({ item }: any) => {
     return (
-      <View style={styles.carouselView}>
-        <Image
-          resizeMode="cover"
-          source={{
-            uri: item.imgHeadline[0],
-          }}
-          style={styles.carouselImage}
-        />
-      </View>
+      <TouchableWithoutFeedback
+        onPress={() => history.push(route.DETAILS_ROUTE(item._id, "blog"))}
+      >
+        <View style={styles.carouselView}>
+          <Image
+            resizeMode="cover"
+            source={{
+              uri: item.imgHeadline[0],
+            }}
+            style={styles.carouselImage}
+          />
+        </View>
+      </TouchableWithoutFeedback>
     );
   };
 
@@ -278,6 +282,11 @@ export default function Home() {
               title="add to cart success"
               color={colorSchema.PRIMARY}
               onPress={() => history.push(route.CART_ADD_SUCCESS)}
+            />
+            <Button
+              title="search"
+              color={colorSchema.PRIMARY}
+              onPress={() => history.push(route.SEARCH)}
             />
           </>
         )}

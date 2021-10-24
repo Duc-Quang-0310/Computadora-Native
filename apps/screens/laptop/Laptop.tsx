@@ -17,6 +17,7 @@ import { useAppSelector } from "../../reduxToolKit-Saga/hooks";
 import { RootState } from "../../reduxToolKit-Saga/store";
 import { iLaptopData } from "../../services/apiTypes";
 import { AntDesign, Entypo } from "@expo/vector-icons";
+import { userDeviceWidth } from "../../common/helpers/screenHelper";
 
 export default function Laptop() {
   const location = useLocation().pathname;
@@ -61,8 +62,8 @@ export default function Laptop() {
           <Carousel
             layout={"stack"}
             data={laptopDataSlice}
-            sliderWidth={350}
-            itemWidth={300}
+            sliderWidth={userDeviceWidth}
+            itemWidth={userDeviceWidth - 40}
             renderItem={renderCarouselLaptop}
             onSnapToItem={(index) => setIndex(index)}
           />

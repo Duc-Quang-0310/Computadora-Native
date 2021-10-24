@@ -18,8 +18,12 @@ export const route = {
     RECEIPT: "/receipt",
     RECEIPT_SUCCESS:"/receipt-success",
     LAPTOP: "/laptop",
-    LAPTOP_DETAILS: "/laptop/details/:id"
+    LAPTOP_DETAILS: "/laptop/details/:id",
+    DETAILS_ROUTE: (id: string, type: "laptop"|"blog") => {
+        return type === "blog" ? `/blog/details/${id}` : `/laptop/details/${id}`
+    }
 }
+
 
 export interface iRoute {
     path: string,
