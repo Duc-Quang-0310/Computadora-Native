@@ -10,7 +10,6 @@ interface iResponType {
 function* fetchLaptopSaga () {
     try {
         const response:iResponType = yield call(() => productService.getAll())
-        console.log("response", response);
         if( response.success  ) {
             yield put(fetchingSuccess({
                 datas: response.data,
@@ -27,6 +26,5 @@ function* fetchLaptopSaga () {
 }
 
 export default function* LaptopSaga () {
-    console.log("Laptop Saga");
     yield all([takeLatest(fetchingLaptop.toString(), fetchLaptopSaga)])
 }

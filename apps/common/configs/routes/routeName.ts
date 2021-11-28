@@ -1,8 +1,8 @@
 export const route = {
     LOADING: "/loading",
     HOME: "/home",
-    SIGNIN:"users/sign-in",
-    SIGNUP:"users/sign-up",
+    SIGNIN:"/users/sign-in",
+    SIGNUP:"/users/sign-up",
     SIGNUP_SUCCESS: "/users/sign-up/success/:token",
     PWRECOVER: "/users/pw-recovery",
     PWRECOVER_SUCCESS:"/users/pw-recovery/:token",
@@ -18,8 +18,12 @@ export const route = {
     RECEIPT: "/receipt",
     RECEIPT_SUCCESS:"/receipt-success",
     LAPTOP: "/laptop",
-    LAPTOP_DETAILS: "/laptop/details/:id"
+    LAPTOP_DETAILS: "/laptop/details/:id",
+    DETAILS_ROUTE: (id: string, type: "laptop"|"blog") => {
+        return type === "blog" ? `/blog/details/${id}` : `/laptop/details/${id}`
+    }
 }
+
 
 export interface iRoute {
     path: string,

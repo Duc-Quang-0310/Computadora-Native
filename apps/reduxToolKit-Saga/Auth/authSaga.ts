@@ -23,7 +23,6 @@ function* loginSaga ( action: PayloadAction<iLoginParams>) {
     console.log("action.payload from login Saga", action.payload );
     try {
         const response:iResponType = yield call(() => authServices.login(action.payload))
-        console.log("response", response);
         
         if( response.success  ) {
             AppStorage.setStorage( "token", response.data.token)
@@ -49,7 +48,6 @@ function* loginSaga ( action: PayloadAction<iLoginParams>) {
 }
 
 function* logoutSaga ( ){
-    console.log("logout saga");
     
     try {
         AppStorage.removeStorage("token")

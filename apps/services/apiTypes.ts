@@ -36,8 +36,38 @@ interface iReceipt {
     cart: iCart[]
 }
 
+interface iBlogData {
+    __v: string
+    _id: string
+    blog: string[]
+    headline: string
+    imgHeadline: string[]
+}
+
+interface iLaptopData {
+    __v: string
+    _id: string
+    card?: string
+    chip?: string
+    color?: string
+    connection?: string
+    imgs: string[]
+    name?: string
+    pin?: string
+    price?: string[]
+    ram?: string
+    review?: string[]
+    screen: string
+    storage: string
+    weight: string
+    window: string
+}
+
+interface iBlogResponseType {
+    success: boolean
+    data: iBlogData[]
+}
 
 
-
-export type { iLoginParams, iSignUpParams, iPWRecoverParams, iUpdateAdress, iUpdatePassword, iReceipt }
+export type { iLoginParams, iSignUpParams, iPWRecoverParams, iUpdateAdress, iUpdatePassword, iReceipt, iBlogData,iLaptopData, iBlogResponseType }
 

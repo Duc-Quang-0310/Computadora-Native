@@ -1,2 +1,2 @@
-export const baseURL: any = "http://192.168.0.102:5000/" 
+export const baseURL: any = "https://back-end-compu-mobile.herokuapp.com/" 
 
